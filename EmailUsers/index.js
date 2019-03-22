@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk');
+
 const ses = new AWS.SES();
 
 const https = require('https');
@@ -51,13 +52,13 @@ exports.handler = (event) => {
           'www.stutzfamily.com',
           'cdn130.picsart.com',
           '4q.cc',
-          'ultimateactionmovies.com'
-
+          'ultimateactionmovies.com',
+          'i386.photobucket.com',
         ],
       };
-    
+
       gis(opts, logResults);
-    
+
       function logResults(resulterror, results) {
         if (resulterror) {
           console.log(resulterror); // eslint-disable-line
@@ -71,7 +72,7 @@ exports.handler = (event) => {
               const sesparams = {
                 Destination: {
                   ToAddresses: itemdataEmailArray,
-    
+
                 },
                 Message: {
                   Body: {
@@ -101,10 +102,10 @@ exports.handler = (event) => {
                 },
                 Source: 'Chuck_Norris_Jokes@hcs.datacom.com.au',
               };
-              console.log(parsejoke.value.joke);
-              ses.sendEmail(sesparams, (err, data) => {
-              if (err) console.log(err, err.stack); // eslint-disable-line
-              else console.log(data); // eslint-disable-line
+              console.log(parsejoke.value.joke); // eslint-disable-line
+              ses.sendEmail(sesparams, (seserr, sesdata) => {
+              if (err) console.log(seserr, seserr.stack); // eslint-disable-line
+              else console.log(sesdata); // eslint-disable-line
               });
             });
           }).on('error', (error) => {
@@ -119,5 +120,5 @@ exports.handler = (event) => {
         docClient.scan(params, onScan);
       }
     }
-  } 
+  }
 };
