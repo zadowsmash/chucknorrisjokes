@@ -47,7 +47,12 @@ exports.handler = (event) => {
           'png2.kisspng.com',
           'pbs.twimg.com',
           'static1.squarespace.com',
-          'www.millcreekent.com'
+          'www.millcreekent.com',
+          'www.stutzfamily.com',
+          'cdn130.picsart.com',
+          '4q.cc',
+          'ultimateactionmovies.com'
+
         ],
       };
     
