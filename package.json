@@ -1,0 +1,24 @@
+{
+  "name": "chucknorrisjokes",
+  "version": "1.0.0",
+  "description": "A fun server-less app to send random Chuck Norris Jokes and images on a schedule to subscribed users via email.",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.422.0",
+    "g-i-s": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zadowsmash/chucknorrisjokes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zadowsmash/chucknorrisjokes/issues"
+  },
+  "homepage": "https://github.com/zadowsmash/chucknorrisjokes#readme"
+}
