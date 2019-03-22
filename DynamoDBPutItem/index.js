@@ -11,8 +11,7 @@ const USERIDSTRING = USERID.toString();
 
 exports.handler = (event) => {
   console.log(event); // eslint-disable-line
-  console.log(typeof(USERIDSTRING))
-
+  
   const params = {
     TableName,
     Item: {
