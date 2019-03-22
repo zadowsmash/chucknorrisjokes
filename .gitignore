@@ -1,0 +1,8 @@
+node_modules
+.env
+event.json
+deploy.envcontext.json
+.eslintrc.json
+event.json
+event_sources.json
+context.json
