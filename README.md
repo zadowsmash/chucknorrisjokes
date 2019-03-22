@@ -18,3 +18,12 @@ A fun server-less app to send random Chuck Norris Jokes and images on a schedule
 * CloudWatch triggers a daily job to execute the backend lambda function to send the random joke/image to subscribed users within the DynamoDB table.
 
 * Users able to unsubscribe from the list if they choose to.
+
+
+#### To Do
+
+* Unsubscribe function
+* Filter out rude jokes
+* Filter out unrelated images
+* Front End
+* < more items to come > 
