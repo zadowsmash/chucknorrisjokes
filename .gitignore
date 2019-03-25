@@ -1,7 +1,6 @@
 node_modules
 .env
 event.json
-deploy.env
 context.json
 .eslintrc.json
 event.json
