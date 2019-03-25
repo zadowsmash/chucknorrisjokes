@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const documentClient = new AWS.DynamoDB.DocumentClient();
+const docClient = new AWS.DynamoDB.DocumentClient();
 
 
 const { TableName, HashKey } = process.env;
@@ -11,17 +11,22 @@ exports.handler = (event) => {
       'emailSubs': [
         {
           DeleteRequest: {
-            Key: { email: 'email@toremove.com' }
+            Key: { USERID: 'email@toremove.com' }
           }
         }
       ]
     }
   };
   
-  documentClient.batchWrite(params, function(err, data) {
-    if (err) console.log(err);
-    else console.log(data);
+  docClient.batchWrite(params, function(err, data) {
+    if (err) {
+      console.log("Error", err);
+    } else {
+      console.log("Success", data);
+    }
   });
+  
+
 
 
 };
