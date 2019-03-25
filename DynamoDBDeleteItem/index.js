@@ -1,23 +1,27 @@
 const AWS = require('aws-sdk');
+const documentClient = new AWS.DynamoDB.DocumentClient();
 
-const docClient = new AWS.DynamoDB.DocumentClient();
-const { TableName, hashKey } = process.env;
+
+const { TableName, HashKey } = process.env;
 
 exports.handler = (event) => {
 
-    var params = {
-        TableName : TableName,
-        Key: {
-          HashKey: HashKey,
-          NumberRangeKey: 1
-        },
-        ConditionExpression: 'email@toremove.com',
-      };
-      
-      docClient.delete(params, function(err, data) {
-        if (err) console.log(err);
-        else console.log(data);
-      });
+  var params = {
+    RequestItems: {
+      'emailSubs': [
+        {
+          DeleteRequest: {
+            Key: { email: 'email@toremove.com' }
+          }
+        }
+      ]
+    }
+  };
+  
+  documentClient.batchWrite(params, function(err, data) {
+    if (err) console.log(err);
+    else console.log(data);
+  });
 
 
 };
