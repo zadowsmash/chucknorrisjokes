@@ -3,7 +3,7 @@ const AWS = require('aws-sdk');
 const docClient = new AWS.DynamoDB.DocumentClient();
 const {
   TableName,
-  emailDelete
+  emailDelete,
 } = process.env;
 
 exports.handler = (event) => {
@@ -11,18 +11,19 @@ exports.handler = (event) => {
 
   var params = {
     TableName: TableName,
-    Key: {
+    IndexName: 'email-index',
 
-      "USERID": "1553569204",
-      "email" : emailDelete
+    KeyConditionExpression: 'email = :hkey ',
+    ExpressionAttributeValues: {
+      ':hkey': emailDelete,
     }
   };
 
-  docClient.get(params, function (err, data) {
+  docClient.query(params, function (err, data) {
     if (err) {
-      console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
+      console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2)); // eslint-disable-line
     } else {
-      console.log("GetItem succeeded:", JSON.stringify(data, null, 2));
+      console.log("GetItem succeeded:", JSON.stringify(data, null, 2)); // eslint-disable-line
     }
   });
 
