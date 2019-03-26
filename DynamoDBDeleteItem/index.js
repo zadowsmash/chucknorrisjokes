@@ -13,7 +13,7 @@ exports.handler = (event) => {
     TableName: TableName,
     Key: {
 
-      "USERID": "*",
+      "USERID": "1553569204",
       "email" : emailDelete
     }
   };
