@@ -1,31 +1,29 @@
 const AWS = require('aws-sdk');
 
 const docClient = new AWS.DynamoDB.DocumentClient();
-const { TableName, emailDelete } = process.env;
+const {
+  TableName,
+  emailDelete
+} = process.env;
 
 exports.handler = (event) => {
   console.log(event); // eslint-disable-line
-  const params = {
-    TableName,
-    ProjectionExpression: '#email, USERID',
-    ExpressionAttributeNames: {
-      '#email': 'email',
-    },
+
+  var params = {
+    TableName: TableName,
+    Key: {
+
+      "USERID": "*",
+      "email" : emailDelete
+    }
   };
 
-  docClient.scan(params, onScan);
-  function onScan(err, data) {
+  docClient.get(params, function (err, data) {
     if (err) {
-      console.error(JSON.stringify(err, null, 2)); // eslint-disable-line
+      console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
     } else {
-      console.log(data); // eslint-disable-line
-      };
-      
-
-      if (typeof data.LastEvaluatedKey !== 'undefined') {
-        console.log('Scanning for more...'); // eslint-disable-line
-        params.ExclusiveStartKey = data.LastEvaluatedKey;
-        docClient.scan(params, onScan);
-      }
+      console.log("GetItem succeeded:", JSON.stringify(data, null, 2));
     }
-  }
+  });
+
+}
