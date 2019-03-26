@@ -9,8 +9,8 @@ const {
 exports.handler = (event) => {
   console.log(event); // eslint-disable-line
 
-  var params = {
-    TableName: TableName,
+  const dcqparams = {
+    TableName,
     IndexName: 'email-index',
 
     KeyConditionExpression: 'email = :hkey ',
@@ -19,31 +19,30 @@ exports.handler = (event) => {
     }
   };
 
-  docClient.query(params, function (err, data) {
-    if (err) {
-      console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2)); // eslint-disable-line
+  docClient.query(dcqparams, (dcqerr, dcqdata) => {
+    if (dcqerr) {
+      console.error("Unable to read item. Error JSON:", JSON.stringify(dcqerr, null, 2)); // eslint-disable-line
     } else {
-      console.log("GetItem succeeded:", JSON.stringify(data, null, 2)); // eslint-disable-line
-      const finalEmailDelete = data.Items[0].email;
-      const finalUserId = data.Items[0].USERID
+      console.log("GetItem succeeded:", JSON.stringify(dcqdata, null, 2)); // eslint-disable-line
+      const finalEmailDelete = dcqdata.Items[0].email;
+      const finalUserId = dcqdata.Items[0].USERID;
 
-      var params = {
-        TableName: TableName,
+      const dcdparams = {
+        TableName,
         Key: {
 
-          "USERID": finalUserId,
-          "email": finalEmailDelete
+          USERID: finalUserId,
+          email: finalEmailDelete
         }
       };
 
-      docClient.delete(params, function (err, data) {
-        if (err) {
-          console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
+      docClient.delete(dcdparams, (dcdderr, data) => {
+        if (dcdderr) {
+          console.error("Unable to read item. Error JSON:", JSON.stringify(dcdderr, null, 2)); // eslint-disable-line
         } else {
-          console.log("GetItem succeeded:", JSON.stringify(data, null, 2));
+          console.log("GetItem succeeded:", JSON.stringify(data, null, 2)); // eslint-disable-line
         }
       });
     }
   });
-
-}
+};

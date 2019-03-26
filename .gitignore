@@ -2,7 +2,6 @@ node_modules
 .env
 event.json
 context.json
-.eslintrc.json
 event.json
 event_sources.json
 context.json
