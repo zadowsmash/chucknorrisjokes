@@ -24,5 +24,4 @@ A fun server-less app to send random Chuck Norris Jokes and images on a schedule
 
 * Filter out rude jokes
 * Filter out unrelated images
-* Front End
-* Authentication between S3 static website (Front End) and Lambda backend
+* Authentication between S3 Static Website > API GW (no auth) > and Lambda backend
