@@ -133,6 +133,7 @@
 const dynamodb = new AWS.DynamoDB();
 const TableName = 'emailSubs'
 const emailaddress = document.getElementById("inputEmail").value;
+console.log(emailaddress);
 const userId = Math.floor(new Date() / 1000);
 const userIdString = userId.toString();
 
@@ -160,6 +161,7 @@ const userIdString = userId.toString();
 
     const docClient = new AWS.DynamoDB.DocumentClient();
     const emailaddress = document.getElementById("inputEmailToRemove").value;
+    console.log(emailaddress);
     const TableName = 'emailSubs'
 
   const dcqparams = {
