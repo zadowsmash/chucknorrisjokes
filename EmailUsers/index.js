@@ -91,7 +91,7 @@ const onScan = params => new Promise((resolve, reject) => {
                     Data: 'Daily Random Chuck Norris Jokes',
                   },
                 },
-                Source: 'Chuck_Norris_Jokes@hcs.datacom.com.au',
+                Source: 'Chuck_Norris_Jokes@chuck-norris-random-daily-jokes.net',
               };
                 console.log(parsejoke.value.joke); // eslint-disable-line
               ses.sendEmail(sesparams, (seserr, sesdata) => {
