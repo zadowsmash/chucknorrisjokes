@@ -105,7 +105,7 @@
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(240, 173, 78), rgba(240, 173, 78));
+  background: -webkit-linear-gradient(rgba(230, 216, 36), rgba(230, 216, 36));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -126,10 +126,6 @@
     font-size: 6.5rem;
     line-height: 6.5rem;
     letter-spacing: 0.8rem;
-  }
-  .masthead h2 {
-    max-width: 30rem;
-    font-size: 1.25rem;
   }
 }
 
