@@ -130,12 +130,13 @@
     <script>
    
         function subscribe() {
-const dynamodb = new AWS.DynamoDB();
-const TableName = 'emailSubs'
-const emailaddress = document.getElementById("inputEmail").value;
-console.log(emailaddress);
-const userId = Math.floor(new Date() / 1000);
-const userIdString = userId.toString();
+        AWS.config.region = 'us-east-1';
+        const dynamodb = new AWS.DynamoDB();
+        const TableName = 'emailSubs'
+        const emailaddress = document.getElementById("inputEmail").value;
+        console.log(emailaddress);
+        const userId = Math.floor(new Date() / 1000);
+        const userIdString = userId.toString();
 
 
   
@@ -158,7 +159,7 @@ const userIdString = userId.toString();
     <script>
 
     function unSubscribe() {
-
+    AWS.config.region = 'us-east-1';
     const docClient = new AWS.DynamoDB.DocumentClient();
     const emailaddress = document.getElementById("inputEmailToRemove").value;
     console.log(emailaddress);
