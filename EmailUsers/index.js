@@ -46,7 +46,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'ultimateactionmovies.com',
           'i386.photobucket.com',
           'cdn140.picsart.com',
-          'cdn.drawception.com'
+          'cdn.drawception.com',
+          'www.bumperstickerz.com'
         ],
       };
 
