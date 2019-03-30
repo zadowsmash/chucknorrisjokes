@@ -47,7 +47,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'i386.photobucket.com',
           'cdn140.picsart.com',
           'cdn.drawception.com',
-          'www.bumperstickerz.com'
+          'www.bumperstickerz.com',
+          'https://www.barzellette.net'
         ],
       };
 
