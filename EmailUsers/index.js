@@ -49,7 +49,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'cdn.drawception.com',
           'www.bumperstickerz.com',
           'https://www.barzellette.net',
-          'jutge.org'
+          'jutge.org',
+          'ipfs.io'
         ],
       };
 
