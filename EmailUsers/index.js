@@ -22,7 +22,7 @@ const onScan = params => new Promise((resolve, reject) => {
 
         console.log(itemdataEmailArray); // eslint-disable-line
       const opts = {
-        searchTerm: ['Chuck Norris Movie', 'Chuck Norris Jeans 70s', 'Chuck Norris action', 'Chuck Norris Martial Arts'],
+        searchTerm: ['Chuck Norris Movie', 'Chuck Norris Jeans 70s', 'Chuck Norris action', 'Chuck Norris Martial Arts', 'Chuck Norris Texas Ranger'],
         queryStringAddition: '&tbs=ic:trans',
         filterOutDomains: [
           'pinterest.com',
