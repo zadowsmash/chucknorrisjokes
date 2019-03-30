@@ -48,7 +48,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'cdn140.picsart.com',
           'cdn.drawception.com',
           'www.bumperstickerz.com',
-          'https://www.barzellette.net'
+          'https://www.barzellette.net',
+          'jutge.org'
         ],
       };
 
