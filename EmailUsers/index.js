@@ -48,9 +48,15 @@ const onScan = params => new Promise((resolve, reject) => {
           'cdn140.picsart.com',
           'cdn.drawception.com',
           'www.bumperstickerz.com',
-          'https://www.barzellette.net',
+          'www.barzellette.net',
           'jutge.org',
-          'ipfs.io'
+          'ipfs.io',
+          'i.kinja-img.com',
+          'cdn3.img.sputniknews.com',
+          'www.broadcastingcable.com',
+          'http://www.cbsjustice.co.uk',
+          'onefinedayblog.com',
+          'www.imryanwalker.com'
         ],
       };
 
