@@ -90,7 +90,9 @@
     </div>
     </section>
 
-    <!-- About Section -->
+
+
+    <!-- About Section  https://getbootstrap.com/docs/4.0/components/forms/-->
     <section id="about" class="about-section text-center">
     <div class="container">
     <div class="row">
@@ -158,82 +160,7 @@
     <!--aws-sdk-->
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.426.0.min.js"></script>
 
-    <!--subscribe function-->
-    <script>
    
-        function subscribe() {
-        AWS.config.region = 'us-east-1';
-        const dynamodb = new AWS.DynamoDB();
-        const TableName = 'emailSubs'
-        const emailaddress = document.getElementById("inputEmail").value;
-        console.log(emailaddress);
-        const userId = Math.floor(new Date() / 1000);
-        const userIdString = userId.toString();
-
-
-  
-  const params = {
-    TableName,
-    Item: {
-      USERID: { S: userIdString },
-      email: { S: emailaddress },
-    },
-  };
-  
-  dynamodb.putItem(params, (err, data) => {
-    if (err) console.log(err, err.stack); // eslint-disable-line
-    else console.log(data); // eslint-disable-line
-  });
-};
-    </script>
-
-    <!--unSubscribe function-->
-    <script>
-
-    function unSubscribe() {
-    AWS.config.region = 'us-east-1';
-    const docClient = new AWS.DynamoDB.DocumentClient();
-    const emailaddress = document.getElementById("inputEmailToRemove").value;
-    console.log(emailaddress);
-    const TableName = 'emailSubs'
-
-  const dcqparams = {
-    TableName,
-    IndexName: 'email-index',
-
-    KeyConditionExpression: 'email = :hkey ',
-    ExpressionAttributeValues: {
-      ':hkey': inputEmailToRemove,
-    }
-  };
-
-  docClient.query(dcqparams, (dcqerr, dcqdata) => {
-    if (dcqerr) {
-      console.error("Unable to read item. Error JSON:", JSON.stringify(dcqerr, null, 2)); // eslint-disable-line
-    } else {
-      console.log("GetItem succeeded:", JSON.stringify(dcqdata, null, 2)); // eslint-disable-line
-      const finalEmailDelete = dcqdata.Items[0].email;
-      const finalUserId = dcqdata.Items[0].USERID;
-
-      const dcdparams = {
-        TableName,
-        Key: {
-
-          USERID: finalUserId,
-          email: finalEmailDelete
-        }
-      };
-
-      docClient.delete(dcdparams, (dcdderr, data) => {
-        if (dcdderr) {
-          console.error("Unable to read item. Error JSON:", JSON.stringify(dcdderr, null, 2)); // eslint-disable-line
-        } else {
-          console.log("GetItem succeeded:", JSON.stringify(data, null, 2)); // eslint-disable-line
-        }
-      });
-    }
-  });
-};
     </script>
 
     </body>
