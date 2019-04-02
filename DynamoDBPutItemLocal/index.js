@@ -12,7 +12,7 @@ const userIdString = userId.toString();
 
 exports.handler = (event) => {
   console.log(event); // eslint-disable-line
-  
+
   const params = {
     TableName,
     Item: {
@@ -20,7 +20,7 @@ exports.handler = (event) => {
       email: { S: emailaddress },
     },
   };
-  
+
   dynamodb.putItem(params, (err, data) => {
     if (err) console.log(err, err.stack); // eslint-disable-line
     else console.log(data); // eslint-disable-line
@@ -63,5 +63,5 @@ exports.handler = (event) => {
   ses.sendEmail(sesparams, (seserr, sesdata) => {
     if (seserr) console.log(seserr, seserr.stack); // eslint-disable-line
     else console.log(sesdata); // eslint-disable-line
-});
+  });
 };
