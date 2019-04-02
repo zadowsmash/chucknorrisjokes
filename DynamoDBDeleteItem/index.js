@@ -26,6 +26,8 @@ exports.handler = (event) => {
       console.log("GetItem succeeded:", JSON.stringify(dcqdata, null, 2)); // eslint-disable-line
       const finalEmailDelete = dcqdata.Items[0].email;
       const finalUserId = dcqdata.Items[0].USERID;
+      console.log(finalEmailDelete);
+      console.log(finalUserId);
 
       const dcdparams = {
         TableName,
