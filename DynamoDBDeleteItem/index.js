@@ -10,7 +10,7 @@ exports.handler = (event) => {
   console.log(event); // eslint-disable-line
 
   const dcqparams = {
-    TableName,
+    TableName: TableName,
     IndexName: 'email-index',
 
     KeyConditionExpression: 'email = :hkey ',
