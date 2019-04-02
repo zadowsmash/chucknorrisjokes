@@ -4,7 +4,7 @@
   "description": "A fun server-less app to send random Chuck Norris Jokes and images on a schedule to subscribed users via email.",
   "main": "index.js",
   "dependencies": {
-    "aws-sdk": "^2.422.0",
+    "aws-sdk": "^2.433.0",
     "g-i-s": "^2.1.2"
   },
   "devDependencies": {},
