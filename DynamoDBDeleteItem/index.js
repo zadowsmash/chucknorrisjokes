@@ -13,7 +13,7 @@ exports.handler = (event) => {
     TableName: TableName,
     IndexName: 'email-index',
 
-    KeyConditionExpression: 'email = :hkey ',
+    KeyConditionExpression: 'email = :hkey',
     ExpressionAttributeValues: {
       ':hkey': emailDelete,
     }
@@ -30,7 +30,7 @@ exports.handler = (event) => {
       console.log(finalUserId);
 
       const dcdparams = {
-        TableName,
+        TableName: TableName,
         Key: {
 
           USERID: finalUserId,
