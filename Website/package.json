@@ -32,7 +32,9 @@
         "@fortawesome/fontawesome-free": "5.8.1",
         "bootstrap": "4.3.1",
         "jquery": "3.3.1",
-        "jquery.easing": "^1.4.1"
+        "jquery.easing": "^1.4.1",
+        "request": "^2.88.0",
+        "require": "^2.4.20"
     },
     "devDependencies": {
         "browser-sync": "2.26.3",

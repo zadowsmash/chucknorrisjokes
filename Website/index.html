@@ -3,21 +3,6 @@
 
 <head>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-    <link rel="manifest" href="../img/manifest.json">
-
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,8 +20,8 @@
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/grayscale.css" rel="stylesheet">
@@ -47,104 +32,104 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-        </ul>
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
 
     <!-- Header -->
     <header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-        <div class="mx-auto text-center">
-        <h1 class="text-warning mb-4 text-uppercase">Chuck Norris Random Daily Jokes</h1>
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="text-warning mb-4 text-uppercase">Chuck Norris Random Daily Jokes</h1>
+            </div>
         </div>
-    </div>
     </header>
 
     <!-- Signup Section -->
     <section id="signup" class="signup-section">
-    <div class="container">
-        <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-            <h2 class="text-warning mb-5">Subscribe to Receive a Random Joke & Image Every Day!</h2>
-            <form class="form-inline d-flex">
-            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail"
-            placeholder="Enter email address...">
-            <button type="submit" onclick=subscribe(); class="btn btn-primary mx-auto">Subscribe</button>
-            </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <h2 class="text-warning mb-5">Subscribe to Receive a Random Joke & Image Every Day!</h2>
+                    <form class="form-signin" method="POST" action="https://2s6awdfv09.execute-api.us-east-1.amazonaws.com/latest">
+                        <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail"
+                        placeholder="Enter email address...">
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Subscribe</button>
+                          </form>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
     </section>
-
-
 
     <!-- About Section  https://getbootstrap.com/docs/4.0/components/forms/-->
     <section id="about" class="about-section text-center">
-    <div class="container">
-    <div class="row">
-        <div class="col-lg-8 mx-auto">
-            <h2 class="text-warning mb-4">A Fun, Silly server-less App Hosted on AWS.</h2>
-            <p class="text-warning mb-1">The source code can be found
-            <a href="https://github.com/zadowsmash/chucknorrisjokes">here</a>.</p>
-            <br>
-            <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-warning mb-4">A Fun, Silly server-less App Hosted on AWS.</h2>
+                    <p class="text-warning mb-1">The source code can be found
+                        <a href="https://github.com/zadowsmash/chucknorrisjokes">here</a>.</p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <img src="img/chuck-image1.jpg" class="img-fluid" alt="">
         </div>
-        </div>
-        <img src="img/chuck-image1.jpg" class="img-fluid" alt="">
-    </div>
     </section>
 
-            <!-- Construction Section -->
-            <section id="construction" class="about-section text-center">
-              <div class="container">
-              <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                      <h2 class="text-warning mb-4">This site is still under construction and is not functional. ETA 2 weeks (as of 31/3/19).</h2>
-                      <br>
-                      <br>
-                  </div>
-                  </div>
-                  <img src="img/Under-Construction.jpg" class="img-fluid" alt="">
-              </div>
-              </section>
+    <!-- Construction Section -->
+    <section id="construction" class="about-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-warning mb-4">This site is still under construction and is not functional. ETA 2
+                        weeks (as of 31/3/19).</h2>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <img src="img/Under-Construction.jpg" class="img-fluid" alt="">
+        </div>
+    </section>
 
     <!-- Unsubscribe Section -->
     <section id="unsubscribe" class="unsubscribe-section">
-    <div class="container">
-        <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-            <h2 class="text-warning mb-5">Un-Subscribe Here</h2>
-            <form class="form-inline d-flex">
-            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmailToRemove"
-            placeholder="Enter email address...">
-            <button type="submit" onclick=unSubscribe(); class="btn btn-primary mx-auto">Un-Subscribe</button>
-            
-            </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <h2 class="text-warning mb-5">Un-Subscribe Here</h2>
+                    <form class="form-inline d-flex">
+                        <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+                            id="inputEmailToRemove" placeholder="Enter email address...">
+                        <button type="submit" onclick=unSubscribe();
+                            class="btn btn-primary mx-auto">Un-Subscribe</button>
+
+                    </form>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
     </section>
 
 
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
-    <div class="container">
-    Copyright &copy; chuck-norris-random-daily-jokes.net 2019
-    </div>
+        <div class="container">
+            Copyright &copy; chuck-norris-random-daily-jokes.net 2019
+        </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
@@ -157,12 +142,6 @@
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
 
-    <!--aws-sdk-->
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.426.0.min.js"></script>
+</body>
 
-   
-    </script>
-
-    </body>
-
-    </html>
+</html>
