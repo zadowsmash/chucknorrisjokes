@@ -77,9 +77,6 @@
         
     <script>
             function subscribe() {
-                // here's where you stop the default submit action of the form
-               // console.log(document.forms.namedItem('subscribe'));
-                // Now execute your AJAX
                 $.ajax({
                     type: "POST",
                     url: "https://2s6awdfv09.execute-api.us-east-1.amazonaws.com/latest",
@@ -129,23 +126,6 @@
     </section>
 
     <!-- Unsubscribe Section -->
-    <!-- <section id="unsubscribe" class="unsubscribe-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <h2 class="text-warning mb-5">Un-Subscribe Here</h2>
-                    <form class="form-inline d-flex">
-                        <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-                            id="inputEmailToRemove" placeholder="Enter email address...">
-                        <button type="submit" onclick=unSubscribe();
-                            class="btn btn-primary mx-auto">Un-Subscribe</button>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- Unsubscribe Section -->
     <section id="unsubscribe" class="unsubscribe-section">
         <div class="container">
             <div class="row">
@@ -182,7 +162,6 @@
             };
         </script>
     </section>
-
 
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
