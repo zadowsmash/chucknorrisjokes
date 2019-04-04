@@ -54,7 +54,7 @@ const onScan = params => new Promise((resolve, reject) => {
           'i.kinja-img.com',
           'cdn3.img.sputniknews.com',
           'www.broadcastingcable.com',
-          'http://www.cbsjustice.co.uk',
+          'www.cbsjustice.co.uk',
           'onefinedayblog.com',
           'www.imryanwalker.com',
           'images.lookhuman.com'
