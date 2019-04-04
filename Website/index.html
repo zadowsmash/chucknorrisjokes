@@ -65,14 +65,33 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <h2 class="text-warning mb-5">Subscribe to Receive a Random Joke & Image Every Day!</h2>
-                    <form class="form-signin" method="POST" action="https://2s6awdfv09.execute-api.us-east-1.amazonaws.com/latest">
+                <!--    <form class="form-signin" method="POST" action="https://2s6awdfv09.execute-api.us-east-1.amazonaws.com/latest">  -->
                         <input type="json" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" name="emailaddress"
                         placeholder="Enter email address...">
                             <button class="btn btn-lg btn-primary btn-block" type="submit">Subscribe</button>
                           </form>
-                </div>
-            </div>
-        </div>
+                  </div>
+              </div>
+          </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+          <script>
+        $("#Send").submit(function(e) {
+        // here's where you stop the default submit action of the form
+        e.preventDefault();
+        // Now execute your AJAX
+        $.ajax({
+            type: "POST",
+            url: "https://2s6awdfv09.execute-api.us-east-1.amazonaws.com/latest",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8'
+        }).done(function(response) {
+            // handle a successful response
+        }).fail(function(xhr, status, message) {
+            // handle a failure response
+        });
+    });
+          </script>
     </section>
 
     <!-- About Section  https://getbootstrap.com/docs/4.0/components/forms/-->
