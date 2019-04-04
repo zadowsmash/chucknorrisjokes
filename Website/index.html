@@ -129,7 +129,7 @@
     </section>
 
     <!-- Unsubscribe Section -->
-    <section id="unsubscribe" class="unsubscribe-section">
+    <!-- <section id="unsubscribe" class="unsubscribe-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -144,7 +144,45 @@
                 </div>
             </div>
         </div>
+    </section> -->
+    <!-- Unsubscribe Section -->
+    <section id="unsubscribe" class="unsubscribe-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <h2 class="text-warning mb-5">Un-Subscribe Here</h2>
+                        <form class="form-signin" id="subscribeForm"> 
+
+                    <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailDelete"
+                        placeholder="Enter email address...">
+                    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="unsubscribe()">Un-Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    <script>
+            function unsubscribe() {
+                // here's where you stop the default submit action of the form
+               // console.log(document.forms.namedItem('subscribe'));
+                // Now execute your AJAX
+                $.ajax({
+                    type: "DELETE",
+                    url: "https://2s6awdfv09.execute-api.us-east-1.amazonaws.com/latest",
+                    data: JSON.stringify({
+                        emailDelete: $('#emailDelete').val()
+                    }),
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8'
+                }).done(function (response) {
+                    // handle a successful response
+                }).fail(function (xhr, status, message) {
+                    // handle a failure response
+                });
+            };
+        </script>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
