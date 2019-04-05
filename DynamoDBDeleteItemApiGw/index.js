@@ -62,15 +62,18 @@ exports.handler = (event, context, callback) => {
           <html>
           <body> 
           
-          <font size="+2"> <b> We are truly sorry to see you go!<b> </font>
+          <font size="+3"> <b> We Are Truly Sorry to See You Go!<b> </font>
           <br>
           <br>
           <img src='https://s3-ap-southeast-2.amazonaws.com/chuck-norris-jokes/img/chuck_cry.jpg'/>
           <br>
-          <font> Today, you have made Chuck cry </font>
-          
-          <font> If you ever want to Subscribe again, please Click </font>
-          <a href="chuck-norris-random-daily-jokes.net">here</a> <font>, Enter your email address in the SUBSCRIBE field and click.</font>
+          <font size="+3"> Today, You Have Made Chuck Cry! </font>
+          <br>
+          <br>
+          <font size="+1"> If You Ever Want to Subscribe Again, Please Click </font>
+          <a href="chuck-norris-random-daily-jokes.net" <font size="1"> Here</a>
+          <br>
+          <font size="+1">Enter Your Email Address in the Subscribe field and click.</font>
           </body> 
           </html>`,
         },
