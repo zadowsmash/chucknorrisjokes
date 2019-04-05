@@ -28,7 +28,7 @@ exports.handler = (event) => {
 
   const sesparams = {
     Destination: {
-      ToAddresses: [emailaddress]
+      ToAddresses: [emailaddress],
 
     },
     Message: {
@@ -36,17 +36,20 @@ exports.handler = (event) => {
         Html: {
           Charset: 'UTF-8',
           Data: ` 
-<html>
-<body> 
-
-<font size="+2"> <b> Thanks for signing up to chuck-norris-random-daily-jokes.net  <b> </font>
-<br>
-<br>
-<br>
-<font> If you ever want to UN-Subscribe, please Click </font>
-<a href="chuck-norris-random-daily-jokes.net">here</a> <font>, enter you email address in the UNSUBSCRIBE field and click.</font>
-</body> 
-</html>`,
+          <html>
+          <body> 
+          
+          <font size="+2"> <b> Congratulations for signing up to chuck-norris-random-daily-jokes.net  <b> </font>
+          <br>
+          <br>
+          <img src='https://images-na.ssl-images-amazon.com/images/I/61rt%2Bdzyi9L._SX425_.jpg'/>
+          <br>
+          
+          
+          <font> If you ever want to UN-Subscribe, please Click </font>
+          <a href="chuck-norris-random-daily-jokes.net">here</a> <font>, enter you email address in the UNSUBSCRIBE field and click.</font>
+          </body> 
+          </html>`,
         },
         Text: {
           Charset: 'UTF-8',
