@@ -89,7 +89,7 @@
                     dataType: 'json',
                     contentType: 'application/json; charset=utf-8'
                 }).done(function (response) {
-                    window.location.replace('success.html');
+                    console.log(response)
                     // handle a successful response
                 }).fail(function (xhr, status, message) {
                     // handle a failure response
