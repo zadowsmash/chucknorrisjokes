@@ -11,7 +11,7 @@ exports.handler = (event) => {
   console.log(event); // eslint-disable-line
 
   const dcqparams = {
-    TableName: TableName,
+    TableName: TableName, // eslint-disable-line
     IndexName: 'email-index',
 
     KeyConditionExpression: 'email = :hkey',
@@ -27,11 +27,11 @@ exports.handler = (event) => {
       console.log("GetItem succeeded:", JSON.stringify(dcqdata, null, 2)); // eslint-disable-line
       const finalEmailDelete = dcqdata.Items[0].email;
       const finalUserId = dcqdata.Items[0].USERID;
-      console.log(finalEmailDelete);
-      console.log(finalUserId);
+      console.log(finalEmailDelete); // eslint-disable-line
+      console.log(finalUserId); // eslint-disable-line
 
       const dcdparams = {
-        TableName: TableName,
+        TableName: TableName, // eslint-disable-line
         Key: {
 
           USERID: finalUserId,
