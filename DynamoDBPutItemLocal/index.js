@@ -8,15 +8,14 @@ const {
 const dynamodb = new AWS.DynamoDB();
 const ses = new AWS.SES();
 const crypto = require("crypto");
-const userIdString = crypto.randomBytes(16).toString("hex");
 
-exports.handler = (event) => {
+exports.handler = (event, context, callback) => {
   console.log(event); // eslint-disable-line
 
   const params = {
     TableName,
     Item: {
-      USERID: { S: userIdString },
+      USERID: { S: crypto.randomBytes(16).toString("hex") },
       email: { S: emailaddress },
     },
   };
