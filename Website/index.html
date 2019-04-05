@@ -89,7 +89,7 @@
                     dataType: 'json',
                     contentType: 'application/json; charset=utf-8'
                 }).done(function (response) {
-                    console.log(response)
+                    $('#emailaddress').val('');
                     // handle a successful response
                 }).fail(function (xhr, status, message) {
                     // handle a failure response
