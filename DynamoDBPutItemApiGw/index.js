@@ -29,7 +29,7 @@ exports.handler = (event, contaxt, callback) => {
       callback(null, {
         statusCode: 200,
         headers: {
-          'Access-Control-Allow-Origin': 'chuck-norris-random-daily-jokes.net'
+          'Access-Control-Allow-Origin': 'https://chuck-norris-random-daily-jokes.net'
         }
       });
     }
