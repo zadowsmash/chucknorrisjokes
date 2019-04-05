@@ -7,7 +7,7 @@ const {
 
 const dynamodb = new AWS.DynamoDB();
 const ses = new AWS.SES();
-const userId = Math.floor(new Date() / 1000);
+const userId = (new Date).getTime();
 const userIdString = userId.toString();
 
 exports.handler = (event) => {
