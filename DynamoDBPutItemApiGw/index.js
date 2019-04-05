@@ -8,8 +8,8 @@ const {
 
 const dynamodb = new AWS.DynamoDB();
 const ses = new AWS.SES();
-const userId = (new Date).getTime();
-const userIdString = userId.toString();
+const crypto = require("crypto");
+const userIdString = crypto.randomBytes(16).toString("hex");
 
 exports.handler = (event, contaxt, callback) => {
   console.log(event); // eslint-disable-line
