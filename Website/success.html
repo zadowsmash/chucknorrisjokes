@@ -47,7 +47,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#unsubscribe">Un-Subscribe</a>
-                      </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -67,18 +67,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <h2 class="text-warning mb-5">Subscribe to Receive a Random Joke & Image of Chuck Norris Every Day!</h2>
-                        <form class="form-signin" id="subscribeForm"> 
+                    <h2 class="text-warning mb-5">You Have Successfully Subscribed. You Will receive Email Confirmation Shortly.
+                    </h2>
+                    <form class="form-signin" id="subscribeForm">
 
-                    <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailaddress"
-                        placeholder="Enter email address...">
-                    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="subscribe()">Subscribe</button>
+                        <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailaddress"
+                            placeholder="Enter email address...">
+                        <button class="btn btn-lg btn-primary btn-block" type="button"
+                            onclick="subscribe();success_sub();">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
-        
-    <script>
+
+        <script>
             function subscribe() {
                 $.ajax({
                     type: "POST",
@@ -89,12 +91,17 @@
                     dataType: 'json',
                     contentType: 'application/json; charset=utf-8'
                 }).done(function (response) {
-                    window.location.replace('success.html');
                     // handle a successful response
                 }).fail(function (xhr, status, message) {
                     // handle a failure response
                 });
             };
+        </script>
+        <script>
+            function success_sub() {
+
+                window.location.replace('success.html');
+            }
         </script>
     </section>
 
@@ -104,8 +111,10 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h2 class="text-warning mb-4">A Fun, Silly server-less App Hosted on AWS.</h2>
-                        <h3 class="text-warning mb-4">You Will Receive a Random Daily Joke & Image of Chuck Norris at 12PM AEST Every Day</h3>
-                        <h4 class="text-warning mb-4">Scheduleing of When You Want to Receive Your Daily Email Will be Added to the Site in the Future (when I have time)</h4>
+                    <h3 class="text-warning mb-4">You Will Receive a Random Daily Joke & Image of Chuck Norris at 12PM
+                        AEST Every Day</h3>
+                    <h4 class="text-warning mb-4">Scheduleing of When You Want to Receive Your Daily Email Will be Added
+                        to the Site in the Future (when I have time)</h4>
                     <br>
                     <br>
                 </div>
@@ -120,20 +129,21 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <h2 class="text-warning mb-5">Un-Subscribe Here</h2>
-                        <form class="form-signin" id="subscribeForm"> 
+                    <form class="form-signin" id="subscribeForm">
 
-                    <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailDelete"
-                        placeholder="Enter email address...">
-                    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="unsubscribe()">Un-Subscribe</button>
+                        <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailDelete"
+                            placeholder="Enter email address...">
+                        <button class="btn btn-lg btn-primary btn-block" type="button"
+                            onclick="unsubscribe()">Un-Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
-        
-    <script>
+
+        <script>
             function unsubscribe() {
                 // here's where you stop the default submit action of the form
-               // console.log(document.forms.namedItem('subscribe'));
+                // console.log(document.forms.namedItem('subscribe'));
                 // Now execute your AJAX
                 $.ajax({
                     type: "DELETE",
@@ -155,9 +165,9 @@
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
         <div class="container">
-                <p class="text-warning mb-1"> Brought to you by ZadowSmAsh </p>
-                <p class="text-warning mb-1">The source code can be found
-                        <a href="https://github.com/zadowsmash/chucknorrisjokes">here</a>.</p>
+            <p class="text-warning mb-1"> Brought to you by ZadowSmAsh </p>
+            <p class="text-warning mb-1">The source code can be found
+                <a href="https://github.com/zadowsmash/chucknorrisjokes">here</a>.</p>
         </div>
     </footer>
 
