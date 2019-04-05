@@ -47,7 +47,7 @@ exports.handler = (event) => {
           
           
           <font> If you ever want to UN-Subscribe, please Click </font>
-          <a href="chuck-norris-random-daily-jokes.net">here</a> <font>, enter you email address in the UNSUBSCRIBE field and click.</font>
+          <a href="chuck-norris-random-daily-jokes.net">here</a> <font>, Enter your email address in the UN-SUBSCRIBE field and click.</font>
           </body> 
           </html>`,
         },
