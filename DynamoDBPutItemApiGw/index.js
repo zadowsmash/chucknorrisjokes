@@ -51,7 +51,7 @@ exports.handler = (event, contaxt, callback) => {
           <font size="+2"> <b> Congratulations for signing up to chuck-norris-random-daily-jokes.net  <b> </font>
           <br>
           <br>
-          <img src='https://images-na.ssl-images-amazon.com/images/I/61rt%2Bdzyi9L._SX425_.jpg'/>
+          <img src='https://s3-ap-southeast-2.amazonaws.com/chuck-norris-jokes/img/chuck_approved.jpg'/>
           <br>
           
           

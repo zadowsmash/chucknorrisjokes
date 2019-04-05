@@ -65,7 +65,7 @@ exports.handler = (event, context, callback) => {
           <font size="+2"> <b> We are truly sorry to see you go!<b> </font>
           <br>
           <br>
-          <img src='http://cdn3-www.musicfeeds.com.au/assets/uploads/chuck-norris-onions.jpg'/>
+          <img src='https://s3-ap-southeast-2.amazonaws.com/chuck-norris-jokes/img/chuck_cry.jpg'/>
           <br>
           <font> Today, you have made Chuck cry </font>
           
