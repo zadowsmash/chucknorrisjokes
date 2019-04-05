@@ -39,8 +39,10 @@ exports.handler = (event, context, callback) => {
           console.error("Unable to read item. Error JSON:", JSON.stringify(dcdderr, null, 2)); // eslint-disable-line
         } else {
           callback(null, {
-            statusCode: 200
-
+            statusCode: 200,
+            headers: {
+              'Access-Control-Allow-Origin': 'chuck-norris-random-daily-jokes.net'
+            }
           });
         }
       });

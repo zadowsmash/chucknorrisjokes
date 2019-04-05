@@ -27,7 +27,10 @@ exports.handler = (event, contaxt, callback) => {
     if (err) console.log(err, err.stack); // eslint-disable-line
     else {
       callback(null, {
-        statusCode: 200
+        statusCode: 200,
+        headers: {
+          'Access-Control-Allow-Origin': 'chuck-norris-random-daily-jokes.net'
+        }
       });
     }
   });
