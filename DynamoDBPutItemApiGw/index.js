@@ -6,7 +6,7 @@ const {
 
 const dynamodb = new AWS.DynamoDB();
 const ses = new AWS.SES();
-const crypto = require("crypto");
+const crypto = require('crypto');
 
 exports.handler = (event, contaxt, callback) => {
   console.log(event); // eslint-disable-line
@@ -15,7 +15,7 @@ exports.handler = (event, contaxt, callback) => {
   const params = {
     TableName,
     Item: {
-      USERID: { S: crypto.randomBytes(16).toString("hex") },
+      USERID: { S: crypto.randomBytes(16).toString('hex') },
       email: { S: emailaddress },
     },
   };
@@ -43,17 +43,16 @@ exports.handler = (event, contaxt, callback) => {
           Charset: 'UTF-8',
           Data: ` 
           <html>
-          <body> 
-          
-          <font size="+2"> <b> Congratulations for signing up to chuck-norris-random-daily-jokes.net  <b> </font>
+          <body>   
+          <font size="+3"> <b> Congratulations For Signing Up to chuck-norris-random-daily-jokes.net <b> </font>
           <br>
           <br>
           <img src='https://s3-ap-southeast-2.amazonaws.com/chuck-norris-jokes/img/chuck_approved.jpg'/>
           <br>
-          
-          
-          <font> If you ever want to UN-Subscribe, please Click </font>
-          <a href="chuck-norris-random-daily-jokes.net">here</a> <font>, Enter your email address in the UN-SUBSCRIBE field and click.</font>
+          <font size="+1"> If You Ever Want to Un-Subscribe, Please Click </font>
+          <a href="chuck-norris-random-daily-jokes.net">Here</a> 
+          <br>
+          <font size="+1">Enter Your Email Address in the Un-Subscribe Field and Click.</font>
           </body> 
           </html>`,
         },
