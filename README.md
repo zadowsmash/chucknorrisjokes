@@ -22,6 +22,7 @@ A fun server-less app to send random Chuck Norris Jokes and images on a schedule
 
 #### To Do
 
-* Filter out rude jokes
-* Filter out unrelated images
-* Authentication between S3 Static Website > API GW (no auth) > and Lambda backend
+* Monitor / Filter out unrelated images
+
+
+![alt text](https://s3-ap-southeast-2.amazonaws.com/chuck-norris-jokes/img/chuck-norris-random-daily-jokes.net_infrastructure.png "Infrastructure Design")
