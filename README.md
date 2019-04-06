@@ -4,27 +4,27 @@ A fun server-less app to send random Chuck Norris Jokes and images on a schedule
 
 ## The site is live and is in beta testing phase.
 
-### Vision
+Access it at the following URL:
 
-* Static hosted website on S3
+[chuck-norris-random-daily-jokes.net](https://chuck-norris-random-daily-jokes.net/)
 
-* Back end lambda function fetching the random jokes/images using the following API and npm module:
+## Open Source API's / NPM Modules used for the site.
+
   * [Chuck Norris Joke API](https://api.icndb.com/jokes/random/)
   * [g-i-s](https://www.npmjs.com/package/g-i-s)
 
+### Usage
 
-* Users subscribe their email address via S3 website and email address is written to a DynamoDB table.
+* Users subscribe their email address via S3 website and email address is written to a DynamoDB table and a confirmation email is received.
 
 * CloudWatch triggers a daily job to execute the backend lambda function to send the random joke/image to subscribed users within the DynamoDB table.
 
-* Users able to unsubscribe from the list if they choose to.
+* Users able to unsubscribe from the list if they choose to and will receive a confirmation email.
 
 
 #### To Do
 
 * Monitor / Filter out unrelated images
-
-
 
 ### Infrastructure Design
 
