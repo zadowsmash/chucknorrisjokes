@@ -92,11 +92,12 @@
                     dataType: 'json',
                     contentType: 'application/json; charset=utf-8'
                 }).done(function (response) {
-                    $('#emailaddress').val('');
+                    
                     // handle a successful response
                 }).fail(function (xhr, status, message) {
                     // handle a failure response
                 });
+                $( "#subscribeForm" ).trigger("reset");
             };
         </script>
     </section>
@@ -123,7 +124,7 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <h2 class="text-warning mb-5">Un-Subscribe Here</h2>
-                        <form class="form-signin" id="subscribeForm"> 
+                        <form class="form-signin" id="unsubscribeForm"> 
                             <p class="text-warning mb-1"> There is currently a small bug with the Un-Subscribe button and the form doesnt clear. Just click once and you will receive a confrmation email that you are Un-Subscribed.</p>
                     <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailDelete"
                         placeholder="Enter email address...">
@@ -152,6 +153,7 @@
                 }).fail(function (xhr, status, message) {
                     // handle a failure response
                 });
+                $( "#unsubscribeForm" ).trigger("reset");
             };
         </script>
     </section>
