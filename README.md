@@ -24,6 +24,8 @@ A fun server-less app to send random Chuck Norris Jokes and images on a schedule
 
 * Monitor / Filter out unrelated images
 
+
+
 #### Infrastructure Design
 
 
