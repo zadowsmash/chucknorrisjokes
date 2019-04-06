@@ -2,7 +2,7 @@
 
 A fun server-less app to send random Chuck Norris Jokes and images on a schedule to subscribed users via email.
 
-## This is in very early development phase.
+## The site is live and is in beta testing phase.
 
 ### Vision
 
