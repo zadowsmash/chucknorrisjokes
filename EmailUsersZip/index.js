@@ -73,7 +73,7 @@ const onScan = params => new Promise((resolve, reject) => {
               const parsejoke = JSON.parse(joke);
               const sesparams = {
                 Destination: {
-                  ToAddresses: itemdataEmailArray,
+                  BccAddresses: itemdataEmailArray,
 
                 },
                 Message: {
