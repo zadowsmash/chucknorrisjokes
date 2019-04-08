@@ -57,7 +57,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'www.cbsjustice.co.uk',
           'onefinedayblog.com',
           'www.imryanwalker.com',
-          'images.lookhuman.com'
+          'images.lookhuman.com',
+          'static5.mnlcdn.com'
         ],
       };
 
