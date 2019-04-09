@@ -8,6 +8,7 @@ const {
 const dynamodb = new AWS.DynamoDB();
 const ses = new AWS.SES();
 const crypto = require('crypto');
+const validator = require("email-validator");
 
 exports.handler = (event, context, callback) => { // eslint-disable-line
   console.log(event); // eslint-disable-line
@@ -20,10 +21,14 @@ exports.handler = (event, context, callback) => { // eslint-disable-line
     },
   };
 
-  dynamodb.putItem(params, (err, data) => {
-    if (err) console.log(err, err.stack); // eslint-disable-line
-    else console.log(data); // eslint-disable-line
-  });
+  if (validator.validate(emailaddress) === true) {
+    dynamodb.putItem(params, (err, data) => {
+      if (err) console.log(err, err.stack); // eslint-disable-line
+      else console.log(data); // eslint-disable-line
+    })
+  } else { 
+    console.log('invalid email') // eslint-disable-line
+  }
 
   const sesparams = {
     Destination: {
@@ -61,8 +66,15 @@ exports.handler = (event, context, callback) => { // eslint-disable-line
     },
     Source: 'ChuckNorrisJokes@chuck-norris-random-daily-jokes.net',
   };
-  ses.sendEmail(sesparams, (seserr, sesdata) => {
-    if (seserr) console.log(seserr, seserr.stack); // eslint-disable-line
-    else console.log(sesdata); // eslint-disable-line
-  });
+
+
+  if (validator.validate(emailaddress) === true) {
+    ses.sendEmail(sesparams, (seserr, sesdata) => {
+      if (seserr) console.log(seserr, seserr.stack); // eslint-disable-line
+      else console.log(sesdata); // eslint-disable-line
+    });
+  } else { 
+    console.log('invalid email')
+  }
+
 };
