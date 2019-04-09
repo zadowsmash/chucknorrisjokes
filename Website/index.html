@@ -52,6 +52,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#signup">Subscribe</a>
+                            </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
@@ -82,10 +85,11 @@
                     <p class="text-warning mb-1"> Click Subscribe and you will receive a confrmation email that you are
                         subscribed.</p>
                     <form class="form-signin" id="subscribeForm">
+                            <input id="emailaddress" type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" name="email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}" required placeholder="Enter email address...">
+                       <!-- <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailaddress" 
+                            placeholder="Enter email address..."> -->
 
-                        <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailaddress"
-                            placeholder="Enter email address...">
-                        <button class="btn btn-lg btn-primary btn-block" type="button"
+                        <button class="btn btn-lg btn-primary btn-block" type="submit"
                             onclick="subscribe()">Subscribe</button>
                     </form>
                 </div>
@@ -140,9 +144,10 @@
                     <form class="form-signin" id="unsubscribeForm">
                         <p class="text-warning mb-1"> Click Un-Subscribe and you will receive a confrmation email that
                             you are Un-subscribed.</p>
-                        <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailDelete"
-                            placeholder="Enter email address...">
-                        <button class="btn btn-lg btn-primary btn-block" type="button"
+                            <input id="emailDelete" type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" name="email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}" required placeholder="Enter email address...">
+                       <!-- <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailDelete" 
+                            placeholder="Enter email address..."> -->
+                        <button class="btn btn-lg btn-primary btn-block" type="submit"
                             onclick="unsubscribe()">Un-Subscribe</button>
                     </form>
                 </div>
