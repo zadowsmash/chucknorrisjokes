@@ -1,0 +1,5 @@
+open terminal  
+copy updated code from EmailUsersLocal/index.js to EmailUsersZip
+cd EmailUsersZip
+zip -r index.zip *
+Upload index.zip to yor Lambda Function.
