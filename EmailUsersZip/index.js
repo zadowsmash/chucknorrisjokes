@@ -10,7 +10,7 @@ const { TableName } = process.env;
 const url = 'https://api.icndb.com/jokes/random/';
 
 const onScan = params => new Promise((resolve, reject) => {
-  const localParam = params;
+  const localParam = params; //lol
   docClient.scan(params, (err, data) => {
     if (err) {
         console.error(JSON.stringify(err, null, 2)); // eslint-disable-line
