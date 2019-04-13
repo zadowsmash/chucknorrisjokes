@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 
 const docClient = new AWS.DynamoDB.DocumentClient();
-const { TableName } = process.env; //test
+const { TableName } = process.env;
 
 exports.handler = (event) => {
   console.log(event); // eslint-disable-line
