@@ -13,7 +13,7 @@ exports.handler = (event) => {
     },
   };
 
-  docClient.scan(params, onScan);
+  docClient.scan(params, onScan); //woot
   function onScan(err, data) {
     if (err) {
       console.error(JSON.stringify(err, null, 2)); // eslint-disable-line
