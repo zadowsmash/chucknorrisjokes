@@ -1,4 +1,10 @@
-node_modules
+DynamoDBDeleteItemApiGw/node_modules
+DynamoDBDeleteItemLocal/node_modules
+DynamoDBDescribeTable/node_modules
+DynamoDBPutItemApiGw/node_modules
+DynamoDBPutItemLocal/node_modules
+DynamoDBScan/node_modules
+EmailUsersUpdate/node_modules
 .env
 event.json
 context.json
