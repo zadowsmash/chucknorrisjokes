@@ -4,6 +4,7 @@ const dynamodb = new AWS.DynamoDB();
 const { TableName } = process.env;
 
 exports.handler = (event) => {
+  console.log(event); // eslint-disable-line
 
   var params = {
     TableName: TableName
