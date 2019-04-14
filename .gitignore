@@ -4,7 +4,7 @@ DynamoDBDescribeTable/node_modules
 DynamoDBPutItemApiGw/node_modules
 DynamoDBPutItemLocal/node_modules
 DynamoDBScan/node_modules
-EmailUsersUpdate/node_modules
+EmailUsersUpdate/
 .env
 event.json
 context.json
