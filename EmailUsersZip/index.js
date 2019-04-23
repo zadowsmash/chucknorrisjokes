@@ -60,7 +60,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'images.lookhuman.com',
           'static5.mnlcdn.com',
           'images.readwrite.com',
-          'external-preview.redd.it'
+          'external-preview.redd.it',
+          'images.vectorhq.com'
         ],
       };
 
