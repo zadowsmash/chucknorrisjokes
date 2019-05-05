@@ -64,7 +64,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'images.vectorhq.com',
           '49hdno3heq6t3nyml63rymvx-wpengine.netdna-ssl.com',
           'risibank.fr',
-          'gallery.grbrewer.com'
+          'gallery.grbrewer.com',
+          'i.kisscc0.com'
         ],
       };
 
