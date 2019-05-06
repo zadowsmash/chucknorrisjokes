@@ -65,7 +65,8 @@ const onScan = params => new Promise((resolve, reject) => {
           '49hdno3heq6t3nyml63rymvx-wpengine.netdna-ssl.com',
           'risibank.fr',
           'gallery.grbrewer.com',
-          'i.kisscc0.com'
+          'i.kisscc0.com',
+          't3.rbxcdn.com'
         ],
       };
 
