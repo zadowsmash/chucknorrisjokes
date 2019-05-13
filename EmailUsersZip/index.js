@@ -66,7 +66,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'risibank.fr',
           'gallery.grbrewer.com',
           'i.kisscc0.com',
-          't3.rbxcdn.com'
+          't3.rbxcdn.com',
+          'static.planetminecraft.com'
         ],
       };
 
