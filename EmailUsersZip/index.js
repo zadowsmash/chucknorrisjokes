@@ -68,7 +68,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'i.kisscc0.com',
           't3.rbxcdn.com',
           'static.planetminecraft.com',
-          'mir-s3-cdn-cf.behance.net'
+          'mir-s3-cdn-cf.behance.net',
+          'photos.ladypopular.com'
         ],
       };
 
