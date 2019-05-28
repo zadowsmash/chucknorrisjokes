@@ -70,7 +70,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'static.planetminecraft.com',
           'mir-s3-cdn-cf.behance.net',
           'photos.ladypopular.com',
-          'www.firstcomicsnews.com'
+          'www.firstcomicsnews.com',
+          'images.techhive.com'
         ],
       };
 
