@@ -71,7 +71,9 @@ const onScan = params => new Promise((resolve, reject) => {
           'mir-s3-cdn-cf.behance.net',
           'photos.ladypopular.com',
           'www.firstcomicsnews.com',
-          'images.techhive.com'
+          'images.techhive.com',
+          'cdn.bleacherreport.net',
+          'img1.wikia.nocookie.net'
         ],
       };
 
