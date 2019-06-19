@@ -73,7 +73,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'www.firstcomicsnews.com',
           'images.techhive.com',
           'cdn.bleacherreport.net',
-          'img1.wikia.nocookie.net'
+          'img1.wikia.nocookie.net',
+          'www.texasranger.org'
         ],
       };
 
