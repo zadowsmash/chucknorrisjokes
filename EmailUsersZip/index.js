@@ -75,7 +75,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'cdn.bleacherreport.net',
           'img1.wikia.nocookie.net',
           'www.texasranger.org',
-          'media.bizj.us'
+          'media.bizj.us',
+          'www.beckleyfamilymartialarts.com'
         ],
       };
 
