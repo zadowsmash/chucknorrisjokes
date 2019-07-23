@@ -76,7 +76,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'img1.wikia.nocookie.net',
           'www.texasranger.org',
           'media.bizj.us',
-          'www.beckleyfamilymartialarts.com'
+          'www.beckleyfamilymartialarts.com',
+          'www.martialartsinternational.com'
         ],
       };
 
