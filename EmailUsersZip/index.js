@@ -77,7 +77,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'www.texasranger.org',
           'media.bizj.us',
           'www.beckleyfamilymartialarts.com',
-          'www.martialartsinternational.com'
+          'www.martialartsinternational.com',
+          'i.imgflip.com'
         ],
       };
 
