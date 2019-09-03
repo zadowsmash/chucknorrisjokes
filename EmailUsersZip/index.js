@@ -78,7 +78,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'media.bizj.us',
           'www.beckleyfamilymartialarts.com',
           'www.martialartsinternational.com',
-          'i.imgflip.com'
+          'i.imgflip.com',
+          'www.codycrosssolutions.com'
         ],
       };
 
