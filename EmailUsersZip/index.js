@@ -13,14 +13,14 @@ const onScan = params => new Promise((resolve, reject) => {
   const localParam = params;
   docClient.scan(params, (err, data) => {
     if (err) {
-        console.error(JSON.stringify(err, null, 2)); // eslint-disable-line
+      console.error(JSON.stringify(err, null, 2)); // eslint-disable-line
     } else {
       const itemdataEmailArray = [];
       data.Items.forEach((itemdata) => {
         itemdataEmailArray.push(itemdata.email);
       });
 
-        console.log(itemdataEmailArray); // eslint-disable-line
+      console.log(itemdataEmailArray); // eslint-disable-line
       const opts = {
         searchTerm: ['Chuck Norris Movie', 'Chuck Norris Jeans 70s', 'Chuck Norris action', 'Chuck Norris Martial Arts', 'Chuck Norris Texas Ranger'],
         queryStringAddition: '&tbs=ic:trans',
@@ -85,11 +85,11 @@ const onScan = params => new Promise((resolve, reject) => {
 
       gis(opts, (resulterror, results) => {
         if (resulterror) {
-            console.log(resulterror); // eslint-disable-line
+          console.log(resulterror); // eslint-disable-line
         } else {
           const arrayRandom = Math.floor(Math.random() * results.length);
           const randomImage = results[arrayRandom].url;
-            console.log(randomImage); // eslint-disable-line
+          console.log(randomImage); // eslint-disable-line
           https.get(url, (res) => {
             res.on('data', (joke) => {
               const parsejoke = JSON.parse(joke);
@@ -103,16 +103,16 @@ const onScan = params => new Promise((resolve, reject) => {
                     Html: {
                       Charset: 'UTF-8',
                       Data: ` 
-   <html>
-   <body> 
-   
-   <font size="+2"> <b> ${parsejoke.value.joke} <b> </font>
-   <br>
-   <br>
-   <br>
-   <img src=${randomImage} align="left" />
-   </body> 
-   </html>`,
+                            <html>
+                            <body> 
+                            
+                            <font size="+2"> <b> ${parsejoke.value.joke} <b> </font>
+                            <br>
+                            <br>
+                            <br>
+                            <img src=${randomImage} align="left" />
+                            </body> 
+                            </html>`,
                     },
                     Text: {
                       Charset: 'UTF-8',
@@ -126,14 +126,14 @@ const onScan = params => new Promise((resolve, reject) => {
                 },
                 Source: 'ChuckNorrisJokes@chuck-norris-random-daily-jokes.net',
               };
-                console.log(parsejoke.value.joke); // eslint-disable-line
+              console.log(parsejoke.value.joke); // eslint-disable-line
               ses.sendEmail(sesparams, (seserr, sesdata) => {
-                  if (err) console.log(seserr, seserr.stack); // eslint-disable-line
-                  else console.log(sesdata); // eslint-disable-line
+                if (err) console.log(seserr, seserr.stack); // eslint-disable-line
+                else console.log(sesdata); // eslint-disable-line
               });
             });
           }).on('error', (error) => {
-              console.error(error); // eslint-disable-line
+            console.error(error); // eslint-disable-line
             reject(error);
           });
         }
@@ -141,7 +141,7 @@ const onScan = params => new Promise((resolve, reject) => {
 
       // resolve(data.LastEvaluatedKey);
       if (typeof data.LastEvaluatedKey !== 'undefined') {
-          console.log('Scanning for more...'); // eslint-disable-line
+        console.log('Scanning for more...'); // eslint-disable-line
         localParam.ExclusiveStartKey = data.LastEvaluatedKey;
         onScan(localParam);
       }
@@ -150,7 +150,7 @@ const onScan = params => new Promise((resolve, reject) => {
 });
 
 exports.handler = (event) => {
-    console.log(event); // eslint-disable-line
+  console.log(event); // eslint-disable-line
 
   const params = {
     TableName,
