@@ -84,7 +84,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'blog.centurymartialarts.com',
           'www.rdr2.org',
           'static.spacecrafted.com',
-          'www.worldblackbeltwarehouse.com'
+          'www.worldblackbeltwarehouse.com',
+          'www.calibrepress.com'
         ],
       };
 
