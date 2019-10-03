@@ -85,7 +85,8 @@ const onScan = params => new Promise((resolve, reject) => {
           'www.rdr2.org',
           'static.spacecrafted.com',
           'www.worldblackbeltwarehouse.com',
-          'www.calibrepress.com'
+          'www.calibrepress.com',
+          'theplaylist.net'
         ],
       };
 
