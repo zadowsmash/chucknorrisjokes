@@ -86,7 +86,9 @@ const onScan = params => new Promise((resolve, reject) => {
           'static.spacecrafted.com',
           'www.worldblackbeltwarehouse.com',
           'www.calibrepress.com',
-          'theplaylist.net'
+          'theplaylist.net',
+          'www.promipool.de',
+          'uploads.guim.co.uk'
         ],
       };
 
