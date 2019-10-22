@@ -88,7 +88,10 @@ const onScan = params => new Promise((resolve, reject) => {
           'www.calibrepress.com',
           'theplaylist.net',
           'www.promipool.de',
-          'uploads.guim.co.uk'
+          'uploads.guim.co.uk',
+          'star101.gu',
+          'assets-global.website-files.com',
+          '2.bp.blogspot.com'
         ],
       };
 
